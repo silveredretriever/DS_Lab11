@@ -64,13 +64,141 @@ public class TestTree
 	
 	public void run()
 	{
-		
+		// Check duck is there
 		check(Strings.IS_IT_ALIVE);
         say("Y");
         //now what? Think of all the input and outputs here...
+		check(Strings.IS_IT_A + Strings.DUCK + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
 		
+		// Check rock is there
+		check(Strings.IS_IT_ALIVE);
+		say("N");
+		check(Strings.IS_IT_A + Strings.ROCK + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
 
-        
+		// Wolf time
+		check(Strings.IS_IT_ALIVE);
+		say("Y");
+		check(Strings.IS_IT_A + Strings.DUCK + "?");
+		say("N");
+		check(Strings.WHAT_IS_THE_ANSWER);
+		say("Wolf");
+		check(Strings.NEW_QUESTION + Strings.DUCK + " and a " + "Wolf");
+		say("Does it have fur?");
+		check("Answering yes to " + "Does it have fur?" + " means " + "Wolf" + "?");
+		say("Y");
+		check(Strings.THANKS);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check duck is still there
+		check(Strings.IS_IT_ALIVE);
+        say("Y");
+        check("Does it have fur?");
+        say("N");
+		check(Strings.IS_IT_A + Strings.DUCK + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check wolf is there
+		check(Strings.IS_IT_ALIVE);
+        say("Y");
+        check("Does it have fur?");
+        say("Y");
+		check(Strings.IS_IT_A + "Wolf" + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Snake time
+		check(Strings.IS_IT_ALIVE);
+        say("Y");
+        check("Does it have fur?");
+        say("N");
+		check(Strings.IS_IT_A + Strings.DUCK + "?");
+		say("N");
+		check(Strings.WHAT_IS_THE_ANSWER);
+		say("Snake");
+		check(Strings.NEW_QUESTION + Strings.DUCK + " and a " + "Snake");
+		say("Is it a bird?");
+		check("Answering yes to " + "Is it a bird?" + " means " + "Snake" + "?");
+		say("N");
+		check(Strings.THANKS);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check duck is still there
+		check(Strings.IS_IT_ALIVE);
+        say("Y");
+        check("Does it have fur?");
+        say("N");
+        check("Is it a bird?");
+        say("Y");
+		check(Strings.IS_IT_A + Strings.DUCK + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check snake is there
+		check(Strings.IS_IT_ALIVE);
+        say("Y");
+        check("Does it have fur?");
+        say("N");
+        check("Is it a bird?");
+        say("N");
+		check(Strings.IS_IT_A + "Snake" + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Computer time
+		check(Strings.IS_IT_ALIVE);
+		say("N");
+		check(Strings.IS_IT_A + Strings.ROCK + "?");
+		say("N");
+		check(Strings.WHAT_IS_THE_ANSWER);
+		say("Computer");
+		check(Strings.NEW_QUESTION + Strings.ROCK + " and a " + "Computer");
+		say("Does it run on electricity?");
+		check("Answering yes to " + "Does it run on electricity?" + " means " + "Computer" + "?");
+		say("Y");
+		check(Strings.THANKS);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check rock is still there
+		check(Strings.IS_IT_ALIVE);
+		say("N");
+		check("Does it run on electricity?");
+		say("N");
+		check(Strings.IS_IT_A + Strings.ROCK + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("Y");
+		
+		// Check computer is there
+		check(Strings.IS_IT_ALIVE);
+		say("N");
+		check("Does it run on electricity?");
+		say("Y");
+		check(Strings.IS_IT_A + "Computer" + "?");
+		say("Y");
+		check(Strings.I_WIN);
+		check(Strings.PLAY_AGAIN);
+		say("N");
         
         //close the streams at the end to enrue good behavior.
 		comp.close();
